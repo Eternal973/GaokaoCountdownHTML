@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>差不多得了</title>
+</head>
+<body onload="time()" >
+<div style="margin-top: 50px;border-radius: 50px;background: #39c5bb;padding-bottom: 10px;padding-top: 10px;margin-left: 200px;margin-right: 200px;">
+<!--采用VOCALOID官方提供的初音色-->
+    <h1 align="center" style="font-size:  4em">这都什么时候了还在玩电脑？？</h1>
+    <h2 style="margin-left: 200px">现在是</h2>
+    <h2 id="now" align="center" style="color: #b37d67;font-size: 42px;"></h2>
+<!--采用设定图中广泛认同的御坂美琴发色-->
+    <h2 style="margin-left: 200px">距离2022年高考只有：</h2>
+    <h1 id="time" align="center" style="color: #ee1c25;font-size: 72px;"></h1>
+<!--采用中国政府网国旗色-->
+</div>
+<script>
+    function  time(){
+        let N =new Date();
+        document.getElementById("time").innerHTML=Math.floor((new Date(2022,6-1,8)-N.getTime())/(24*60*60*1000))+"天"
+        document.getElementById("now").innerHTML=N.getFullYear()+"年"+(N.getMonth()+1)+"月"+N.getDate()+"日"+N.getHours()+"时"+N.getMinutes()+"分"+N.getSeconds()+"秒";
+        console.log("log");
+    }
+    setInterval(time,1000);
+</script>
+<!--by Eternal973-->
+<!--2021.6.24-->
+</body>
+</html>
